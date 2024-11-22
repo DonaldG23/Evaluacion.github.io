@@ -1,0 +1,127 @@
+/* Fondo degradado para todo el fondo exterior */
+body {
+    background: linear-gradient(to bottom, #e3f2fd, #90caf9); /* Fondo degradado suave */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Logo de la UMG (fuera del contenedor) */
+.logo-umg img {
+    position: absolute;
+    top: 20px;  /* Ajusta la distancia desde la parte superior */
+    left: 20px;  /* Ajusta la distancia desde la parte izquierda */
+    width: 100px;  /* Ajusta el tamaño del logo */
+    height: auto;  /* Mantiene la proporción del logo */
+    z-index: 10;  /* Asegura que el logo esté por encima de otros elementos */
+}
+
+/* Contenedores principales: login y contenido del curso */
+.login-container, .curso-container {
+    background: white; /* Fondo blanco para el área del contenido */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para destacarlo */
+    max-width: 600px; /* Ancho máximo reducido para el login */
+    margin: 50px auto; /* Centrado horizontal y separación vertical */
+    padding: 20px;
+    position: relative; /* Permite manejar elementos dentro del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    justify-content: center; /* Centra los elementos hijos verticalmente */
+}
+
+/* Imágenes integradas en el texto */
+img.inline-image {
+    width: 200px; /* Tamaño fijo para las imágenes */
+    height: auto; /* Mantiene la proporción */
+    margin: 0 10px 0 0; /* Margen solo en el lado derecho para espacio con el texto */
+    float: right; /* Imagen alineada a la derecha dentro del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+/* Ajuste del texto para imágenes flotantes */
+p {
+    font-size: 16px;
+    color: #555; /* Gris medio */
+    line-height: 1.6;
+    text-align: justify; /* Alineación para legibilidad */
+}
+
+/* Ajuste para los campos de entrada (usuario, contraseña) y botones */
+input[type="text"], input[type="password"], select, button {
+    width: 80%; /* Reduce el ancho de los campos */
+    padding: 8px; /* Menos espacio dentro de los campos */
+    margin: 10px 0;
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Etiquetas (usuario, contraseña) alineadas a la izquierda */
+label {
+    width: 80%; /* El ancho de las etiquetas igual al de los campos */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-bottom: 5px; /* Margen debajo de la etiqueta */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Botón centrado y con tamaño adecuado */
+button {
+    width: 80%; /* Ajustar el ancho del botón al mismo tamaño de los campos */
+    padding: 10px; /* Mantener un tamaño adecuado para el botón */
+    font-size: 14px; /* Reducir tamaño de la fuente */
+    background-color: #007bff; /* Azul moderno */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none; /* Sin bordes adicionales */
+    transition: background-color 0.3s ease; /* Efecto suave al pasar el ratón */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color más oscuro al hacer hover */
+}
+
+/* Títulos y encabezados */
+h1, h2 {
+    font-size: 24px;
+    color: #333; /* Gris oscuro para buen contraste */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Listas de temas */
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #333;
+}
+
+/* Formularios de evaluación */
+form {
+    margin-top: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Ajustes para pantallas grandes */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 20px; /* Incrementar un poco el tamaño de la fuente */
+    }
+
+    .login-container, .curso-container {
+        max-width: 1000px; /* Ancho más amplio en pantallas grandes */
+    }
+}
